@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This is another project</title>
+    <link rel="shortcut icon" href="image/vehicle-1.png" type="image/x-icon">
+</head>
+<body>
+    <p id="countNumber">0</p>
+    <button id="counterIncreasedBtn">increased</button>
+    <button id="counterDecreasedBtn">decreased</button>
+    <script>
+        const countValue = (isIncrease) =>{
+            /* let counter = document.getElementById("countNumber");
+            const counterValue = parseInt(counter.innerText) + 1;
+            counter.innerText = counterValue; */
+            let counter = document.getElementById("countNumber");
+            if(isIncrease){
+                counter.innerText = parseInt(counter.innerText) + 1;
+            }
+            else{
+                counter.innerText = parseInt(counter.innerText) - 1;
+            }
+        }
+        document.getElementById("counterIncreasedBtn").addEventListener("click",()=>{
+            countValue(true);
+        })
+        document.getElementById("counterDecreasedBtn").addEventListener("click",()=>{
+            countValue(false);
+        })
+    </script>
+</body>
+</html>
